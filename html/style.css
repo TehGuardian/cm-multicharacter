@@ -1,0 +1,588 @@
+@import url('https://db.onlinewebfonts.com/c/ab21a97b9cae2e116d8d1473baefc9f0?family=RDR+Lino+Regular');
+.container {
+    display: none;
+}
+
+.main-screen {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    z-index: 100;
+}
+
+.characters-block-header>p {
+    text-align: left;
+    color: #ffffff;
+    line-height: 24px;
+    font-family: "RDR Lino Regular";
+}
+
+.characters-list {
+    display: none;
+    position: relative;
+    width: 15%;
+    height: 40%;
+    left: 43%;
+    top: 85%;
+    overflow: visible !important;
+
+    padding: 130px;
+
+}
+
+.character {
+    position: relative;
+    width: 100%;
+    height: 75px;
+    margin-top: 15px;
+    font-family: "RDR Lino Regular";
+    border-bottom: 4px solid #0bae0b00;
+    transition: .1s linear;
+    border-radius: .3vh;
+    cursor: pointer;
+}
+
+.character>span {
+    color: #00000063;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .1vh;
+    font-family: "RDR Lino Regular";
+}
+
+#cid {
+    color: #0000008a;
+    position: relative;
+    float: right;
+    font-size: 1.5vh;
+    right: 35px;
+    line-height: 80px;
+}
+
+.char-selected {
+    background-color: #00000000;
+}
+
+.disabled {
+    background-color: rgba(0, 0, 0, 0.691);
+}
+
+#slot-name {
+    position: relative;
+    color: #0000008a;
+    font-size: 17px;
+    line-height: 80px;
+    left: 20px;
+    font-family: "RDR Lino Regular";
+}
+
+.character-btn {
+    display: none;
+    position: absolute;
+    width: 33vh;
+    height: 12vh;
+    top: 10vh;
+    left: 20.5vh;
+    right: 0;
+    margin-left: 10%;
+    margin-right: auto;
+    
+    padding: 20px;
+    font-family: "RDR Lino Regular";
+    color: #ffe100eb;
+    overflow: visible !important;
+
+    background-image: url();
+	background-size: 100% 100%;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+
+.character-btn>p {
+    color: #0000008a;
+    text-align: center;
+    font-family: "RDR Lino Regular";
+    font-size: 1vh;
+    text-transform: uppercase;
+    line-height: 1.5vh;
+    font-weight: bold;
+}
+
+#play {
+    position: relative;
+    width: 18%;
+    height: 1%;
+    bottom: 0;
+    left: -1%;
+    top: 17%;
+    margin-bottom: 20px;
+    background-color: #056e3a;
+    border-radius: 13px;
+    transition: 0.2s;
+    overflow: visible !important;
+    cursor: pointer;
+}
+
+
+#play:hover {
+    background-color: #068f1458;
+    text-align: center;
+}
+
+#delete {
+    position: relative;
+    width: 18%;
+    height: 2%;
+    top: 2%;
+    bottom: 0;
+    left: 67%;
+    margin-bottom: 20px;
+    background-color: #851124;
+    border-radius: 16px;
+    transition: 0.2s;
+    overflow: visible !important;
+    cursor: pointer;
+}
+
+#delete:hover {
+    background-color: #85112474;
+}
+
+.character-list-header>p {
+    text-transform: uppercase;
+    position: relative;
+    font-size: 2vh;
+    font-family: "RDR Lino Regular";
+    color: #282828d3;
+    left: 90px;
+    letter-spacing: .1vh;
+    font-weight: 900;
+    overflow: visible !important;
+}
+
+.character-info {
+    display: none;
+    position: absolute;
+    width: 52%;
+    height: 50%;
+    right: 5%;
+    top: -25%;
+    border-radius: .8vh;
+    padding: 30px;
+    
+    overflow: visible !important;
+
+    background-image: url(./assets/ink01.png);
+	background-size: 100% 105%;
+	background-position: left;
+	background-repeat: no-repeat;
+    z-index: -1;
+    filter: contrast(1.3);
+}
+
+#char-info-icon {
+    position: relative;
+    font-size: 1.5vh;
+    color: #ffffff;    
+    right: 20px;
+    overflow: visible !important;
+}
+
+#char-info-titel {
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 2vh;
+    font-family: "RDR Lino Regular";
+    color: #0000008a;
+    left: -5vh;
+    letter-spacing: .1vh;
+    font-weight: 900;
+    overflow: visible !important;
+}
+
+.char-info-js {
+    position: absolute;
+    left: 50%;
+    font-weight: 900;
+    font-family: "RDR Lino Regular";
+    text-transform: uppercase;
+}
+
+#info-label {
+    margin-left: 10px;
+    font-weight: 900;
+    font-family: "RDR Lino Regular";
+    text-transform: uppercase;
+}
+
+#no-char {
+    font-family: "RDR Lino Regular";
+    position: absolute;
+    color: #711e1ec3;
+    font-size: 16px;
+    left: 5%;
+    top: 30%;
+    text-align: left;
+}
+
+.char-info-titel {
+    position: relative;
+    left: 58%;
+    top: 20%;
+    overflow: visible !important;
+}
+
+.character-info-valid {
+    position: relative;
+    top: 30%;
+    left: 52%;
+    width: 34%;
+    overflow: visible !important;
+}
+
+.character-info-box {
+    position: relative;
+    color: #0000008a;
+    font-size: 1.4vh;
+    width: 83%;
+    height: 3.9vh;
+    font-weight: 900;
+    left:5%;
+    font-family: "RDR Lino Regular";
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.character-delete {
+    display: none;
+    position: absolute;
+    width: 19%;
+    height: 31%;
+    left: 64%;
+    top: 20%;
+    
+    padding: 80px;
+    font-family: "RDR Lino Regular";
+    color: #b3301ccb;
+    overflow: visible !important;
+
+    background-image: url(./assets/char_delete1a.png);
+	background-size: 100% 100%;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+
+.characters-delete-block-header {
+    position: absolute;
+    width: 106%;
+    height: 11%;
+    color: #920a0a99;
+    text-align: center;
+    left: 0%;
+    font-size: 2vh;
+    line-height: 165px;
+    font-family: "RDR Lino Regular";
+    font-weight: 900;
+    text-transform: uppercase;
+    overflow: visible !important;
+}
+
+.characters-delete-block-header>p {
+    font-family: "RDR Lino Regular";
+    overflow: visible !important;
+}
+
+.character-delete>p {
+    padding-top: 120px;
+    font-size: 1.1vh;
+    text-align: center;
+    overflow: visible !important;
+}
+
+#yeet {
+    overflow: visible !important;
+}
+
+.character-acceptdel-btn {
+    position: absolute;
+    width: 15%;
+    height: 9%;
+    bottom: 0;
+    left: 28%;
+    top: 51%;
+    margin-bottom: 20px;
+    background-color: #7a030373;
+    border-radius: 9px;
+    transition: 0.2s;
+    overflow: visible !important;
+    cursor: pointer;
+}
+
+.character-canceldel-btn {
+    position: absolute;
+    width: 15%;
+    height: 9%;
+    bottom: 0;
+    right: 21%;
+    top: 52%;
+    margin-bottom: 20px;
+    background-color: #0354076c;
+    border-radius: 4px;
+    transition: 0.2s;
+    overflow: visible !important;
+    cursor: pointer;
+}
+
+.character-acceptdel-btn>p {
+    color: #000000;
+    text-align: center;
+    padding-top: 1vh;
+    font-family: "RDR Lino Regular";
+    overflow: visible !important;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.character-canceldel-btn>p {
+    color: #000000;
+    text-align: center;
+    padding-top: 1vh;
+    font-family: "RDR Lino Regular";
+    overflow: visible !important;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.character-register {
+    position: absolute;
+    width: 23%;
+    height: 24%;
+    top: 125%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 588px;
+    background-image: url(./assets/char_register1b.png);
+    background-size: 100% 100%;
+    border-radius: 1.8vh;
+    padding: 124px;
+    font-family: "RDR Lino Regular";
+}
+
+i#close-reg {
+    position: relative;
+    top: -2vh;
+    cursor: pointer;
+}
+
+.material-icons-one {
+    margin-left: 38.5vh;
+    color: #000000;
+    background-color: #9a002473;
+    font-size: 1.3vh;
+    font-weight: 900;
+    border-radius: 0.5vh;
+    padding: 0.2vh;
+}
+
+.characters-register-block-header {
+    text-transform: uppercase;
+    position: relative;
+    width: 114%;
+    left: -13%;
+    height: 3vh;
+    color: #000000d0;
+    text-align: center;
+    text-shadow: #9f3434e0 1px 0 10px;
+    font-size: 2vh;
+    font-weight: 900;
+}
+
+.char-register-inputs {
+    position: absolute;
+    top: 14%;
+    overflow: visible !important;
+}
+
+.char-reg-input {
+    position: relative;
+    float: left;
+    margin-top: 1vh;
+    border: none;
+    background-image: url(./assets/inkroller_1a.png);
+	background-size: 100% 100%;
+    outline: none;
+    width: 92%;
+    height: 3vh;
+    color: #030303;
+    max-width: 100%;
+    font-weight: 900;
+    padding: 4px;
+    border-radius: .3vh;
+    font-family: "RDR Lino Regular";
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    cursor: text;
+}
+
+select {
+    position: absolute;
+    border: none;
+    background-image: url(./assets/select_1a.png.png);
+	background-size: 100% 100%;
+    outline: none;
+    width: 93.5%;
+    height: 4vh;
+    top: 19.9vh;
+    left: .1vh;
+    color: #070707;
+    max-width: 100%;
+    padding: 4px;
+    border-radius: .3vh;
+    font-family: "RDR Lino Regular";
+    text-align-last: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+select:hover {
+    background-color: rgba(34, 34, 34, 0.808);
+}
+
+select:focus {
+    background-color: rgba(34, 34, 34, 0.808);
+}
+
+#gender option {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+select::placeholder {
+    text-align: center;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.char-reg-input::placeholder {
+    color: rgba(255, 255, 255, 0.52);
+}
+
+input[type="date"] {
+    color: #ffff;
+    text-align: center;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="date"]::-webkit-input-placeholder {
+    visibility: hidden !important;
+}
+
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+#birthdate {
+    color: #0000008a;
+    text-align: center;
+    font-family: "RDR Lino Regular";
+}
+
+.character-reg-btn {
+    position: absolute;
+    max-width: 22%;
+    height: 4vh;
+    background-color: #137c077c;
+    border-radius: 1.3vh;
+    bottom: 7vh;
+    margin: 0 auto;
+    left: 0px;
+    right: 0;
+    cursor: pointer;
+}
+
+.character-reg-btn>p {
+    text-align: center;
+    line-height: 4vh;
+    color: #000000;
+    text-transform: uppercase;
+    font-family: "RDR Lino Regular";
+    font-size: 2vh;
+    font-weight: 900;
+}
+
+.loading-rondje {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 1vh;
+}
+
+.loading-rondje > p {
+    color: white;
+    margin-top: 1vh;
+    font-family: "RDR Lino Regular";
+    text-shadow: 1px 1px 0px #00000085;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
